@@ -6,11 +6,30 @@
     <title>PostgreSQL Testing</title>
 </head>
 <body>
+    <h2>Add New</h2>
     <form action="/submit" method="post">
         <input type="text" name="name" placeholder="Enter Your Name" required/>
         <input type="text" name="email" placeholder="Email" required/>
-        <textarea name="message" placeholder="describe Yourself"></textarea>
+        <textarea name="message" placeholder="Describe Yourself"></textarea>
         <button type="submit" >Submit</button>
+    </form>
+    <h2>Views data</h2>
+    <form action="/all-users" method="get">
+        <button type="/all-users">View Data</button>
+    </form>
+    <h2>Update Form</h2>
+    <form action="/update" method="post">
+        <input type="text" name="id" placeholder="please enter User id" required/>
+        <input type="text" name="name" placeholder="Enter Your New name"/>
+        <input type="text" name="email" placeholder="Enter your new email"/>
+        <textarea name="message" placeholder="Describe Yourself"></textarea>
+        <button type="/update">Update</button>
+    </form>
+    <h2>Delete Button</h2>
+    <form action="/delete" method="POST">
+        <label>Enter User id:</label>
+        <input name="id" type="number" placeholder="Enter User id" required/>
+        <button type="submit">Delete</button>
     </form>
 </body>
 </html>
